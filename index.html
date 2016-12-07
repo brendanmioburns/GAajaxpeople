@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AJAX Testing</title>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+        <!-- Handlebars Library - put it before app.js because we want it to use its fuctionality -->
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+        <!-- Handle JS -->
+        <script src="https://rawgit.com/arsood/handlejs/master/handle.js"></script>
+
+        <script src="app.js"></script>
+    </head>
+<body>
+
+    <table>
+        <thead>
+            <!-- We want this to stay the same -->
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="people-rows">
+            <script id="people-template" type="text/x-handlebars-template">
+                <!-- We want a new row per new user -->
+                <!-- Handlebars syntax below -->
+                <tr>
+                    <td>{{firstname}}</td>
+                    <td>{{lastname}}</td>
+                    <td>{{username}}</td>
+                    <td>{{email}}</td>
+                </tr>
+            </script>
+        </tbody>
+    </table>
+
+</body>
+</html>
